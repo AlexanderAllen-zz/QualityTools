@@ -1,0 +1,9 @@
+---
+- name: Install PHP Coder Sniffer
+  command: composer global require squizlabs/PHP_CodeSniffer:\>=1.4.1 creates={{ composer_bin_dir }}/phpcs
+
+- name: Download PHP LOC
+  command: composer global require phploc/phploc:\>2.0 creates={{ composer_bin_dir }}/phploc
+
+- name: Download PHPMD
+  command: composer global require phpmd/phpmd:\>2.0 creates={{ composer_bin_dir }}/phpmd
